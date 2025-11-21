@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Academics | Patkai The Heritage Public School
+  </title>
+  <meta name="description"
+    content="Explore the comprehensive academic programs at Patkai The Heritage Public School, including our curriculum, syllabus, pedagogical approach, and extra-curricular activities." />
+  <meta name="keywords"
+    content="School Curriculum, Class Syllabus, Teaching Methodology, Academic Calendar, Student Achievements, School Results" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Academics | Patkai The Heritage Public School" />
+  <meta property="og:description"
+    content="Delve into the academic excellence that defines Patkai The Heritage Public School." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;700&family=Great+Vibes&family=League+Spartan:wght@900&family=Poppins:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* Custom Styles from Homepage */
+    :root {
+      --maroon-dark: #7a1538;
+      --maroon-light: #a82d55;
+      --pink-light: #ebb2c0;
+      --bg-light: #fffdfb;
+      --text-secondary: #555;
+    }
+
+    html,
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--maroon-dark);
+      background-color: var(--bg-light);
+      overflow-x: hidden;
+    }
+
+    .font-great-vibes {
+      font-family: "Great Vibes", cursive;
+    }
+
+    .font-cormorant {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--maroon-dark);
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand img {
+      height: 60px;
+    }
+
+    .navbar-brand .school-name {
+      color: #ffffff;
+      margin-left: 1rem;
+      border-left: 2px solid white;
+      padding-left: 1rem;
+    }
+
+    .navbar-brand h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .navbar-brand p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0 0.8rem;
+      transition: color 0.3s;
+    }
+    
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+        color: var(--pink-light);
+    }
+
+    .dropdown-menu {
+        background-color: var(--maroon-dark);
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .dropdown-item {
+        color: #eee;
+        font-size: 0.85rem;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .dropdown-item:hover, .dropdown-item.active {
+        color: white;
+        background-color: var(--maroon-light);
+    }
+
+    /* Custom Animated Hamburger Button */
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+      width: 30px;
+      height: 22px;
+      position: relative;
+      background: transparent;
+      transition: all 0.35s ease-in-out;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler .hamburger-line {
+      display: block;
+      background-color: #fff;
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      transition: all 0.35s ease-in-out;
+    }
+    
+    .navbar-toggler .hamburger-line-1 { top: 0; }
+    .navbar-toggler .hamburger-line-2 { top: 50%; transform: translateY(-50%); }
+    .navbar-toggler .hamburger-line-3 { bottom: 0; }
+
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-1 { top: 50%; transform: translateY(-50%) rotate(45deg); }
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-2 { opacity: 0; }
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-3 { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+    /* Page Header Section */
+    .page-header {
+        background: linear-gradient(rgba(122, 21, 56, 0.8), rgba(122, 21, 56, 0.8)), url('/assets/images/Hero\ Section.png') no-repeat center center;
+        background-size: cover;
+        padding: 8rem 0;
+        color: white;
+        text-align: center;
+    }
+
+    .page-header h1 {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 700;
+        letter-spacing: 0.1em;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 0;
+    }
+    
+    /* Content Card Styling */
+    .content-card {
+        background-color: #ffffff;
+        border-radius: 1rem;
+        padding: 2.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    }
+    
+    .content-card h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 700;
+        color: var(--maroon-light);
+        margin-bottom: 1.5rem;
+    }
+
+    .content-card p, .content-card li {
+        color: var(--text-secondary);
+        line-height: 1.8;
+    }
+
+    /* Academics Tab Navigation */
+    .academics-nav .nav-pills .nav-link {
+        color: var(--maroon-dark);
+        background-color: #f8f9fa;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 1px solid #eee;
+    }
+
+    .academics-nav .nav-pills .nav-link.active,
+    .academics-nav .nav-pills .nav-link:hover {
+        background-color: var(--maroon-dark);
+        color: white;
+        box-shadow: 0 5px 15px rgba(122, 21, 56, 0.2);
+        transform: translateX(5px);
+    }
+    
+    .tab-content .tab-pane {
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Syllabus Buttons Style */
+    .syllabus-btn {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        color: var(--maroon-dark);
+        transition: all 0.3s ease;
+    }
+
+    .syllabus-btn:hover, .syllabus-btn.active {
+        background-color: var(--maroon-dark);
+        color: white;
+        border-color: var(--maroon-dark);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--maroon-dark);
+      color: white;
+      padding: 4rem 0 2rem 0;
+    }
+
+    .footer-links h5 {
+      color: var(--pink-light);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li a {
+      color: #ddd;
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    
+    @media (max-width: 991.98px) {
+      .navbar { padding: 1rem 1.5rem; }
+      .navbar-brand img { height: 50px; }
+      .navbar-brand h1 { font-size: 1rem; }
+      .navbar-brand p { font-size: 0.7rem; }
+
+      .navbar-collapse.show, .navbar-collapse.collapsing {
+        background-color: rgba(122, 21, 56, 0.9);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+        .academics-nav {
+            margin-bottom: 2rem;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo" />
+          <div class="school-name">
+            <h1>PATKAI THE HERITAGE</h1>
+            <p>PUBLIC SCHOOL</p>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-line hamburger-line-1"></span>
+          <span class="hamburger-line hamburger-line-2"></span>
+          <span class="hamburger-line hamburger-line-3"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About Us
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                      <li><a class="dropdown-item" href="about.html">About Us Overview</a></li>
+                      <li><a class="dropdown-item" href="about.html#history">Foundational History</a></li>
+                      <li><a class="dropdown-item" href="about.html#mission">Mission & Vision</a></li>
+                      <li><a class="dropdown-item" href="about.html#admin">Administrative Framework</a></li>
+                      <li><a class="dropdown-item" href="about.html#infra">Infrastructure</a></li>
+                      <li><a class="dropdown-item" href="about.html#faculty">Faculty Profiles</a></li>
+                      <li><a class="dropdown-item" href="about.html#logo">Logo Significance</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownAcademics" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Academics
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownAcademics">
+                      <li><a class="dropdown-item" href="#curriculum">Curriculum Overview</a></li>
+                      <li><a class="dropdown-item" href="#syllabus">Class-wise Syllabus</a></li>
+                      <li><a class="dropdown-item" href="#pedagogy">Pedagogical Approach</a></li>
+                      <li><a class="dropdown-item" href="#calendar">Academic Calendar</a></li>
+                      <li><a class="dropdown-item" href="#achievements">Academic Achievements</a></li>
+                      <li><a class="dropdown-item" href="#results">Results</a></li>
+                      <li><a class="dropdown-item" href="#extra-curricular">Extra-Curricular Activities</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="admission.html" id="navbarDropdownAdmission" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admission
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdmission">
+                        <li><a class="dropdown-item" href="admission.html">Admission Overview</a></li>
+                        <li><a class="dropdown-item" href="admission.html#procedure">Admission Procedure</a></li>
+                        <li><a class="dropdown-item" href="admission.html#fees">Fee Structure</a></li>
+                    </ul>
+                </li>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="gallery.html" id="navbarDropdownGallery" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <li><a class="dropdown-item" href="gallery.html">Gallery Overview</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#class-photos">Class-wise Photography</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#campus-life">Campus Life</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#events">Event Gallery</a></li>
+                    </ul>
+                </li>
+              <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="notice-board.html" id="navbarDropdownNotice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Notice Board
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownNotice">
+                        <li><a class="dropdown-item" href="notice-board.html">Notice Board Overview</a></li>
+                        <li><a class="dropdown-item" href="notice-board.html#notifications">Notifications</a></li>
+                        <li><a class="dropdown-item" href="notice-board.html#downloads">Downloads</a></li>
+                    </ul>
+                </li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+        <div class="container">
+            <h1>Academics</h1>
+        </div>
+    </section>
+
+    <section id="academic-details">
+        <div class="container">
+            <div class="row">
+                <!-- Side Navigation -->
+                <div class="col-md-4 col-lg-3 academics-nav">
+                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-curriculum-tab" data-bs-toggle="pill" data-bs-target="#curriculum" type="button" role="tab" aria-controls="curriculum" aria-selected="true"><i class="fas fa-book-open me-2"></i>Curriculum Overview</button>
+                        <button class="nav-link" id="v-pills-syllabus-tab" data-bs-toggle="pill" data-bs-target="#syllabus" type="button" role="tab" aria-controls="syllabus" aria-selected="false"><i class="fas fa-list-ul me-2"></i>Class-wise Syllabus</button>
+                        <button class="nav-link" id="v-pills-pedagogy-tab" data-bs-toggle="pill" data-bs-target="#pedagogy" type="button" role="tab" aria-controls="pedagogy" aria-selected="false"><i class="fas fa-chalkboard-teacher me-2"></i>Pedagogical Approach</button>
+                        <button class="nav-link" id="v-pills-calendar-tab" data-bs-toggle="pill" data-bs-target="#calendar" type="button" role="tab" aria-controls="calendar" aria-selected="false"><i class="fas fa-calendar-alt me-2"></i>Academic Calendar</button>
+                        <button class="nav-link" id="v-pills-achievements-tab" data-bs-toggle="pill" data-bs-target="#achievements" type="button" role="tab" aria-controls="achievements" aria-selected="false"><i class="fas fa-trophy me-2"></i>Academic Achievements</button>
+                        <button class="nav-link" id="v-pills-results-tab" data-bs-toggle="pill" data-bs-target="#results" type="button" role="tab" aria-controls="results" aria-selected="false"><i class="fas fa-poll me-2"></i>Results</button>
+                        <button class="nav-link" id="v-pills-extra-curricular-tab" data-bs-toggle="pill" data-bs-target="#extra-curricular" type="button" role="tab" aria-controls="extra-curricular" aria-selected="false"><i class="fas fa-palette me-2"></i>Extra-Curricular</button>
+                    </div>
+                </div>
+
+                <!-- Content Panes -->
+                <div class="col-md-8 col-lg-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        
+                        <div class="tab-pane fade show active" id="curriculum" role="tabpanel" aria-labelledby="v-pills-curriculum-tab">
+                            <div class="content-card">
+                                <h3>Curriculum Overview</h3>
+                                <p>Our curriculum is thoughtfully designed to be comprehensive and balanced, following the guidelines of the Central Board of Secondary Education (CBSE). We aim to provide a robust educational foundation while fostering intellectual curiosity and a passion for lifelong learning. The curriculum integrates core academic subjects with a rich array of co-curricular and extra-curricular activities to ensure the holistic development of each student.</p>
+                                <img src="https://placehold.co/800x400/a82d55/ffffff?text=Page+under+construction&font=poppins" class="img-fluid rounded-3 mt-3" alt="Curriculum Chart">
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="syllabus" role="tabpanel" aria-labelledby="v-pills-syllabus-tab">
+                            <div class="content-card">
+                                <h3>Class-wise Syllabus</h3>
+                                <p>Select a class to view its detailed syllabus. The syllabus for each subject is meticulously planned to ensure progressive and sequential learning.</p>
+                                
+                                <!-- Class Buttons -->
+                                <div class="mb-4 d-flex flex-wrap">
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 1</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 2</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 3</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 4</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 5</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 6</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 7</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 8</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 9</button>
+                                    <button class="btn m-1 syllabus-btn" data-pdf-src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Class 10</button>
+                                </div>
+                        
+                                <!-- PDF Viewer -->
+                                <div id="syllabus-viewer-container" class="ratio ratio-16x9" style="display: none;">
+                                    <iframe id="syllabus-viewer" src="" title="Syllabus PDF Viewer" allowfullscreen></iframe>
+                                </div>
+                                <div id="syllabus-placeholder" class="text-center p-5 border rounded-3 bg-light">
+                                     <i class="fas fa-hand-pointer fa-3x text-muted mb-3"></i>
+                                     <p class="text-muted mb-0">Please select a class above to view the syllabus.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pedagogy" role="tabpanel" aria-labelledby="v-pills-pedagogy-tab">
+                            <div class="content-card">
+                                <h3>Pedagogical Approach</h3>
+                                <p>Our teaching methodology is student-centric, interactive, and inquiry-based. We move beyond rote learning to foster critical thinking, problem-solving, and creativity. Our pedagogical tools include:
+                                <ul>
+                                    <li>Smart classrooms with digital learning aids.</li>
+                                    <li>Project-based and experiential learning.</li>
+                                    <li>Collaborative group work and peer learning.</li>
+                                    <li>Regular assessments and personalized feedback.</li>
+                                </ul>
+                                We believe in creating an engaging and supportive atmosphere where students feel empowered to ask questions and explore new ideas.</p>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="calendar" role="tabpanel" aria-labelledby="v-pills-calendar-tab">
+                            <div class="content-card">
+                                <h3>Academic Calendar</h3>
+                                <p>Here is the complete schedule for the academic year 2025-26. You can view it below or download a copy for your reference.</p>
+                                
+                                <!-- PDF Viewer -->
+                                <div class="ratio ratio-16x9 mb-3 border rounded-3 overflow-hidden">
+                                    <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" title="Academic Calendar PDF Viewer" allowfullscreen></iframe>
+                                </div>
+                                
+                                <!-- Download Button -->
+                                <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download="Patkai_Academic_Calendar_2025-26.pdf" class="btn btn-primary" style="background-color: var(--maroon-dark); border-color: var(--maroon-dark);">
+                                    <i class="fas fa-download me-2"></i>Download Calendar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="achievements" role="tabpanel" aria-labelledby="v-pills-achievements-tab">
+                            <div class="content-card">
+                                <h3>Academic Achievements</h3>
+                                <p>We take immense pride in the academic accomplishments of our students. Our students consistently excel in CBSE board examinations and various competitive exams at the national and international levels. This section celebrates the hard work and success of our scholars, highlighting their distinctions in various academic fields.</p>
+                                <img src="https://placehold.co/800x400/7a1538/ffffff?text=Student+Achievements&font=poppins" class="img-fluid rounded-3 mt-3" alt="Student Achievements">
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="v-pills-results-tab">
+                            <div class="content-card">
+                                <h3>Results</h3>
+                                <p>Transparency in academic performance is a cornerstone of our philosophy. Here, we publish the annual results and performance analysis of our students in board examinations and internal assessments. Our consistent record of academic excellence is a testament to the dedication of our students and the unwavering support of our faculty.</p>
+                                <a href="#" class="btn btn-primary" style="background-color: var(--maroon-dark); border-color: var(--maroon-dark);">View Latest Results</a>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="extra-curricular" role="tabpanel" aria-labelledby="v-pills-extra-curricular-tab">
+                            <div class="content-card">
+                                <h3>Extra-Curricular Activities</h3>
+                                <p>Education at Patkai extends beyond the classroom. We offer a diverse range of extra-curricular activities to nurture the hidden talents of our students. These programs are designed to enhance creativity, physical fitness, and teamwork, providing students with opportunities to explore their interests and develop into well-rounded individuals.</p>
+                                
+                                <div class="row mt-4">
+                                    <!-- Sports Card -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                                            <img src="https://placehold.co/600x400/7a1538/ffffff?text=Sports&font=poppins" class="card-img-top" alt="Sports Activities">
+                                            <div class="card-body">
+                                                <h5 class="card-title font-cormorant" style="color: var(--maroon-light);">Sports</h5>
+                                                <p class="card-text small text-secondary">Fostering teamwork and physical fitness through activities like football, basketball, and athletics.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Arts Card -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                                            <img src="https://placehold.co/600x400/a82d55/ffffff?text=Arts&font=poppins" class="card-img-top" alt="Arts Activities">
+                                            <div class="card-body">
+                                                <h5 class="card-title font-cormorant" style="color: var(--maroon-light);">Creative Arts</h5>
+                                                <p class="card-text small text-secondary">Unleashing creativity with programs in music, dance, drama, and various fine arts disciplines.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Eco Club Card -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                                            <img src="https://placehold.co/600x400/7a1538/ffffff?text=Eco+Club&font=poppins" class="card-img-top" alt="Eco Club">
+                                            <div class="card-body">
+                                                <h5 class="card-title font-cormorant" style="color: var(--maroon-light);">Eco Club</h5>
+                                                <p class="card-text small text-secondary">Promoting environmental awareness and sustainability through hands-on projects and campaigns.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Science Club Card -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                                            <img src="https://placehold.co/600x400/a82d55/ffffff?text=Science+Club&font=poppins" class="card-img-top" alt="Science Club">
+                                            <div class="card-body">
+                                                <h5 class="card-title font-cormorant" style="color: var(--maroon-light);">Science Club</h5>
+                                                <p class="card-text small text-secondary">Igniting curiosity for discovery with exciting experiments, workshops, and science fairs.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Debate Club Card -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                                            <img src="https://placehold.co/600x400/7a1538/ffffff?text=Debate+Club&font=poppins" class="card-img-top" alt="Debate Club">
+                                            <div class="card-body">
+                                                <h5 class="card-title font-cormorant" style="color: var(--maroon-light);">Debate Club</h5>
+                                                <p class="card-text small text-secondary">Developing critical thinking and public speaking skills through structured debates and discussions.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Literary Society Card -->
+                                    <div class="col-lg-4 col-md-6 mb-4">
+                                        <div class="card h-100 shadow-sm border-0 rounded-3">
+                                            <img src="https://placehold.co/600x400/a82d55/ffffff?text=Literary+Society&font=poppins" class="card-img-top" alt="Literary Society">
+                                            <div class="card-body">
+                                                <h5 class="card-title font-cormorant" style="color: var(--maroon-light);">Literary Society</h5>
+                                                <p class="card-text small text-secondary">Celebrating literature with reading sessions, creative writing workshops, and poetry slams.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row gy-4 footer-links">
+        <div class="col-lg-4 col-md-12">
+          <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+            <img src="assets/images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo"
+              style="height: 60px;" />
+            <div class="school-name">
+              <h1 style="font-size: 1rem;">PATKAI THE HERITAGE</h1>
+              <p style="font-size: 0.7rem;">PUBLIC SCHOOL</p>
+            </div>
+          </a>
+          <p class="small text-white-50">A premier educational institution in Assam offering holistic education, cultural heritage preservation, and academic excellence.</p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h5>Academics</h5>
+          <ul>
+            <li><a href="#curriculum">Curriculum</a></li>
+            <li><a href="about.html#faculty">Faculty</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <h5>Contact Us</h5>
+          <p class="small text-white-50 mb-1">N.H. 15, Near Patkai Bridge, Tezpur, Assam 784001</p>
+          <p class="small text-white-50 mb-1">contact@patkaiheritage.edu.in</p>
+          <p class="small text-white-50 mb-1">+91 12345 67890</p>
+        </div>
+      </div>
+      <div class="row footer-bottom">
+        <div class="col-md-6">
+          <p>&copy; 2025 Patkai The Heritage. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p>Designed by Echelon Media</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Function to handle tab switching based on URL hash
+        const handleHashChange = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const triggerEl = document.querySelector(`.nav-pills button[data-bs-target="${hash}"]`);
+                if (triggerEl) {
+                    const tab = new bootstrap.Tab(triggerEl);
+                    tab.show();
+                }
+            }
+        };
+
+        // Handle hash on page load
+        handleHashChange();
+
+        // Handle clicks on dropdown links to show the right tab
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a[href^="#"]');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const hash = this.getAttribute('href');
+                const triggerEl = document.querySelector(`.nav-pills button[data-bs-target="${hash}"]`);
+                if (triggerEl) {
+                    const tab = new bootstrap.Tab(triggerEl);
+                    tab.show();
+
+                    // Optional: Smooth scroll to the content area
+                    const contentEl = document.querySelector('#academic-details');
+                    if (contentEl) {
+                        contentEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Syllabus PDF Viewer Logic
+        const syllabusBtns = document.querySelectorAll('.syllabus-btn');
+        const syllabusViewerContainer = document.getElementById('syllabus-viewer-container');
+        const syllabusViewer = document.getElementById('syllabus-viewer');
+        const syllabusPlaceholder = document.getElementById('syllabus-placeholder');
+
+        syllabusBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                // Show viewer and hide placeholder
+                if (syllabusViewerContainer.style.display === 'none') {
+                    syllabusViewerContainer.style.display = 'block';
+                    syllabusPlaceholder.style.display = 'none';
+                }
+                
+                const pdfSrc = button.getAttribute('data-pdf-src');
+                syllabusViewer.setAttribute('src', pdfSrc);
+
+                // Handle active state
+                syllabusBtns.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    });
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Patkai The Heritage Public School | Excellence in Education | Assam
+  </title>
+  <meta name="description"
+    content="Patkai The Heritage Public School - Premier educational institution in Assam offering holistic education, cultural heritage preservation, and academic excellence for future leaders." />
+  <meta name="keywords"
+    content="Patkai Heritage School, Public School Assam, Quality Education, Academic Excellence, Cultural Heritage, Holistic Education" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Patkai The Heritage Public School | Excellence in Education" />
+  <meta property="og:description"
+    content="Premier educational institution offering holistic education and cultural heritage preservation in Assam" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;700&family=Great+Vibes&family=League+Spartan:wght@900&family=Poppins:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* Custom Styles */
+    :root {
+      --maroon-dark: #7a1538;
+      --maroon-light: #a82d55;
+      --pink-light: #ebb2c0;
+      --bg-light: #fffdfb;
+      --text-secondary: #555;
+    }
+
+    html,
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--maroon-dark);
+      background-color: var(--bg-light);
+      overflow-x: hidden;
+      /* Prevent horizontal scroll */
+    }
+
+    .font-great-vibes {
+      font-family: "Great Vibes", cursive;
+    }
+
+    .font-cormorant {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      margin-top: -30px;
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #8E0032, #fff);
+    }
+
+    .hero-text-container {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 150px;
+      /* Space for navbar */
+      padding-bottom: 50px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      background-color: transparent;
+      padding: 1.5rem 2rem;
+      margin-top: 30px;
+    }
+
+    .navbar-brand img {
+      height: 70px;
+    }
+
+    .navbar-brand .school-name {
+      color: #ffffff;
+      margin-left: 1rem;
+      border-left: 2px solid white;
+      padding-left: 1rem;
+    }
+
+    .navbar-brand h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .navbar-brand p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+      font-size: 0.85rem;
+      /* Reduced font size */
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0 0.8rem;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: var(--pink-light);
+    }
+    
+    .dropdown-menu {
+        background-color: var(--maroon-dark);
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .dropdown-item {
+        color: #eee;
+        font-size: 0.85rem;
+        font-family: "Poppins", sans-serif;
+    }
+    .dropdown-item:hover {
+        color: white;
+        background-color: var(--maroon-light);
+    }
+
+    /* --- NEW --- CSS for hover dropdown on desktop */
+    @media (min-width: 992px) {
+        .navbar .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; /* Adjust if there's an unwanted gap */
+        }
+    }
+
+
+    /* Custom Animated Hamburger Button */
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+      width: 30px;
+      height: 22px;
+      position: relative;
+      background: transparent;
+      transition: all 0.35s ease-in-out;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler .hamburger-line {
+      display: block;
+      background-color: #fff;
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      transition: all 0.35s ease-in-out;
+    }
+
+    .navbar-toggler .hamburger-line-1 {
+      top: 0;
+    }
+    .navbar-toggler .hamburger-line-2 {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .navbar-toggler .hamburger-line-3 {
+      bottom: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-1 {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-2 {
+      opacity: 0;
+    }
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-3 {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+
+    /* Hero Content */
+    .hero-content {
+      margin-top: -100px;
+      position: relative;
+      text-align: center;
+      z-index: 10;
+      width: 100%;
+    }
+    
+    .hero-title-main, .hero-title-sub {
+        line-height: 1.2;
+    }
+
+    .font-great-vibes-hero {
+        font-family: 'Great Vibes', cursive;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+    }
+    
+    .font-cormorant-hero {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 300;
+        color: #FF769F;
+        font-size: clamp(2rem, 5vw, 3rem);
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
+
+    /* Building Image */
+    .building-image {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      margin-top: -210px;
+      /* Moves image up */
+      position: relative;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-title-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .section-title-line hr {
+      flex-grow: 1;
+      max-width: 300px;
+      border-top: 2px solid var(--maroon-dark);
+      opacity: 0.5;
+    }
+
+    .section-title-line h2 {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    /* Principal's Desk Section */
+    #about h2.display-4 {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    #about .principal-img-wrapper {
+      padding: 0;
+      /* Remove padding */
+      border: none;
+      /* Remove border */
+    }
+
+    /* Ideograms Cards */
+    .ideogram-card {
+      background-color: var(--maroon-dark);
+      color: #ffffff;
+      border-radius: 1.5rem;
+      transition: transform 0.3s ease;
+      padding: 1.5rem;
+    }
+
+    .ideogram-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .ideogram-card-text {
+      text-align: left;
+    }
+
+    .ideogram-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .ideogram-card .btn-show-more {
+      background-color: white;
+      color: var(--maroon-dark);
+      border: none;
+      border-radius: 20px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .ideogram-card .btn-show-more:hover {
+      background-color: var(--pink-light);
+      color: white;
+    }
+
+    /* Why Patkai Section */
+    #admission {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    .why-patkai {
+      padding: 60px 0;
+      /* reduce top and bottom spacing */
+      min-height: 90vh;
+      /* slightly less than full screen */
+      display: flex;
+      /* center vertically */
+      align-items: center;
+    }
+
+    .why-patkai-bg-shape {
+      margin-top: 150px;
+      position: absolute;
+      top: 0;
+      left: -15%;
+      width: 35%;
+      /* Reduced from 45% */
+      height: 70%;
+      background-color: #722135;
+      border-radius: 0 40% 40% 0;
+      z-index: 1;
+    }
+
+    .why-patkai-bg-shape::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      background-color: #8c2a4c;
+      border-radius: 0 40% 40% 0;
+      opacity: 0.6;
+    }
+
+    .why-patkai-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .why-patkai-subtitle {
+      font-family: 'League Spartan', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      /* Reduced size */
+      font-weight: 900;
+      line-height: 1;
+      text-align: right;
+      /* Aligned to the right */
+    }
+
+    .decorative-shapes-wrapper {
+      position: relative;
+      margin-top: 2rem;
+      height: 100px;
+    }
+
+    .decorative-shape-pink {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-70%);
+      width: 250px;
+      height: 90px;
+      background-color: var(--pink-light);
+      border-radius: 50px;
+    }
+
+    .decorative-shape-maroon {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(30%);
+      width: 120px;
+      height: 120px;
+      background-color: var(--maroon-dark);
+      border-radius: 50%;
+    }
+
+    /* Glimpses & Notices Section */
+    #glimpses-notices {
+      padding: 6rem 0;
+      margin-top: 4rem;
+    }
+
+    .glimpses-title-wrapper {
+      position: relative;
+      border-right: 2px solid var(--pink-light);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .glimpses-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5rem;
+      transform: rotate(-90deg);
+      white-space: nowrap;
+    }
+
+    .notice-box {
+      background-color: #f0f0f0;
+      border-radius: 1.5rem;
+      height: 250px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .notice-box .scrolling-wrapper {
+      animation: scroll-up 25s linear infinite;
+    }
+
+    .notice-box:hover .scrolling-wrapper {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-up {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+
+    .scrolling-wrapper a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .scrolling-wrapper a:last-child {
+        border-bottom: none;
+    }
+
+    .scrolling-wrapper a:hover {
+      color: var(--maroon-dark);
+    }
+    
+    .events-box {
+        background-color: #f0f0f0;
+        border-radius: 1.5rem;
+        height: 250px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .events-box:hover .event-poster-wrapper {
+      animation-play-state: paused;
+    }
+
+    .event-poster-wrapper {
+        display: flex;
+        width: calc((170px + 1rem) * 10); /* (poster width + gap) * (2 * number of posters) */
+        gap: 1rem;
+        animation: scroll-left 40s linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .event-poster {
+        flex: 0 0 auto;
+        width: 170px;
+        height: 210px;
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .event-poster:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    .event-poster img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .event-box {
+      background-color: #f0f0f0;
+      border-radius: 1.5rem;
+      height: 220px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    .event-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Social Media Bar */
+    .social-bar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: rgba(122, 21, 56, 0.7);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      padding: 1rem 0.75rem;
+      border-radius: 0 1rem 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      z-index: 1000;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .social-bar.hidden {
+      transform: translateX(-100%) translateY(-50%);
+    }
+
+    .social-bar a {
+      color: white;
+      font-size: 1.25rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .social-bar a:hover {
+      color: var(--pink-light);
+      transform: scale(1.1);
+    }
+
+
+    /* Footer */
+    footer {
+      background-color: var(--maroon-dark);
+      color: white;
+      padding: 4rem 0 2rem 0;
+    }
+
+    .footer-links h5 {
+      color: var(--pink-light);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li a {
+      color: #ddd;
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Scroll Animation Styles */
+    .animate-on-scroll {
+      opacity: 0;
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      will-change: opacity, transform;
+    }
+    .animate-on-scroll.fade-in-up {
+      transform: translateY(40px);
+    }
+    .animate-on-scroll.fade-in-left {
+      transform: translateX(-40px);
+    }
+    .animate-on-scroll.fade-in-right {
+      transform: translateX(40px);
+    }
+    .animate-on-scroll.zoom-in {
+        transform: scale(0.9);
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 991.98px) {
+      .navbar {
+        padding: 1rem 1.5rem;
+        margin-top: 20px;
+      }
+      .navbar-brand img {
+        height: 60px;
+      }
+      .navbar-brand h1 {
+        font-size: 1rem;
+      }
+      .navbar-brand p {
+        font-size: 0.7rem;
+      }
+
+      .navbar-collapse.show, .navbar-collapse.collapsing {
+        background-color: rgba(122, 21, 56, 0.85);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px); /* For Safari */
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+        .why-patkai-bg-shape {
+            display: none;
+        }
+
+        .why-patkai-subtitle {
+            text-align: center;
+            font-size: clamp(2rem, 10vw, 3rem);
+            margin-top: 2rem;
+        }
+
+        .glimpses-title-wrapper {
+            border-right: none;
+            border-bottom: 2px solid var(--pink-light);
+            height: auto;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .glimpses-title {
+            transform: rotate(0deg);
+            font-size: 4rem;
+        }
+      }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Social Media Bar -->
+    <div id="social-bar" class="social-bar">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:contact@patkaiheritage.edu.in" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo" />
+            <div class="school-name">
+              <h1>PATKAI THE HERITAGE</h1>
+              <p>PUBLIC SCHOOL</p>
+            </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="hamburger-line hamburger-line-1"></span>
+            <span class="hamburger-line hamburger-line-2"></span>
+            <span class="hamburger-line hamburger-line-3"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                        <li><a class="dropdown-item" href="about.html">About Us Overview</a></li>
+                        <li><a class="dropdown-item" href="about.html#history">Foundational History</a></li>
+                        <li><a class="dropdown-item" href="about.html#mission">Mission & Vision</a></li>
+                        <li><a class="dropdown-item" href="about.html#admin">Administrative Framework</a></li>
+                        <li><a class="dropdown-item" href="about.html#infra">Infrastructure</a></li>
+                        <li><a class="dropdown-item" href="about.html#faculty">Faculty Profiles</a></li>
+                        <li><a class="dropdown-item" href="about.html#logo">Logo Significance</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownAcademics" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Academics
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAcademics">
+                        <li><a class="dropdown-item" href="academics.html#curriculum">Curriculum Overview</a></li>
+                        <li><a class="dropdown-item" href="academics.html#syllabus">Class-wise Syllabus</a></li>
+                        <li><a class="dropdown-item" href="academics.html#pedagogy">Pedagogical Approach</a></li>
+                        <li><a class="dropdown-item" href="academics.html#calendar">Academic Calendar</a></li>
+                        <li><a class="dropdown-item" href="academics.html#achievements">Academic Achievements</a></li>
+                        <li><a class="dropdown-item" href="academics.html#results">Results</a></li>
+                        <li><a class="dropdown-item" href="academics.html#extra-curricular">Extra-Curricular Activities</a></li>
+                    </ul>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="admission.html" id="navbarDropdownAdmission" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admission
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdmission">
+                        <li><a class="dropdown-item" href="admission.html">Admission Overview</a></li>
+                        <li><a class="dropdown-item" href="admission.html#procedure">Admission Procedure</a></li>
+                        <li><a class="dropdown-item" href="admission.html#fees">Fee Structure</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="gallery.html" id="navbarDropdownGallery" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <li><a class="dropdown-item" href="gallery.html">Gallery Overview</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#class-photos">Class-wise Photography</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#campus-life">Campus Life</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#events">Event Gallery</a></li>
+                    </ul>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="notice-board.html" id="navbarDropdownNotice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Notice Board
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownNotice">
+                        <li><a class="dropdown-item" href="notice-board.html">Notice Board Overview</a></li>
+                        <li><a class="dropdown-item" href="notice-board.html#notifications">Notifications</a></li>
+                        <li><a class="dropdown-item" href="notice-board.html#downloads">Downloads</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="hero-text-container">
+        <div class="hero-content">
+          <h2 class="hero-title-main">
+              <span class="font-great-vibes-hero">Shaping</span><span class="font-cormorant-hero" style="font-family: 'League Spartan';"> the future</span>
+          </h2>
+          <h3 class="hero-title-sub" style="margin-top: -30px; font-family: 'League Spartan';">
+              <span class="font-cormorant-hero" >honoring the </span><span class="font-great-vibes-hero">Heritage</span>
+          </h3>
+        </div>
+      </div>
+      <img src="assets/images/Hero Section.png" alt="School building architectural rendering" class="building-image" />
+    </section>
+
+    <!-- Principal's Desk Section -->
+    <section id="about" class="bg-white">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 animate-on-scroll fade-in-left">
+            <h2 class="font-cormorant fw-bold display-4 mb-2">
+              Principal's Desk
+            </h2>
+            <p class="fs-5 fw-light mb-4">Mr. Pulok Banerjee</p>
+            <p class="text-secondary">
+              It is with immense pride and great pleasure that I extend a warm
+              welcome to the Patkai the Heritage Public School community—our
+              students, parents, staff, and well-wishers. As the Principal, it
+              is an honor to lead an institution that is deeply committed to
+              upholding the rich educational and cultural heritage of our
+              region, while preparing our students for a future of global
+              opportunities. At Patkai the Heritage Public School, our mission
+              goes beyond academic excellence. We believe that true education is a
+              holistic process that nurtures the mind, body, and spirit. We strive to create an inclusive and stimulating environment where every child feels respected, appreciated, and inspired to discover their unique potential.
+            </p>
+          </div>
+          <div class="col-lg-6 animate-on-scroll fade-in-right">
+            <div class="principal-img-wrapper">
+              <img src="assets/images/principal.png" alt="Principal Mr. Pulok Banerjee at his desk"
+                class="img-fluid rounded-4 shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ideograms Section -->
+    <section id="academics" class="bg-light">
+      <div class="container text-center">
+        <div class="section-title-line animate-on-scroll fade-in-up">
+          <hr />
+          <h2 class="h4">Ideograms</h2>
+          <hr />
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 animate-on-scroll fade-in-up" style="transition-delay: 0.1s;">
+            <article class="ideogram-card h-100 shadow">
+              <div class="ideogram-header">
+                <img src="assets/images/mission.png" alt="Mission icon" style="width: 60px" />
+                <h3 class="h5 fw-bold text-uppercase text-end" style="letter-spacing: 0.2em">Our<br />Mission</h3>
+              </div>
+              <p class="small fw-light mb-0 text-start">Our mission is to provide quality education that nurtures intellectual curiosity, critical thinking, and moral values while preserving our cultural heritage.</p>
+            </article>
+          </div>
+          <div class="col-md-4 animate-on-scroll fade-in-up" style="transition-delay: 0.2s;">
+            <article class="ideogram-card h-100 shadow">
+              <div class="ideogram-header">
+                <img src="assets/images/vision.png" alt="Vision icon" style="width: 60px" />
+                <h3 class="h5 fw-bold text-uppercase text-end" style="letter-spacing: 0.2em">Our<br />Vision</h3>
+              </div>
+              <p class="small fw-light mb-0 text-start">To be a leading educational institution that combines traditional values with modern pedagogy, creating confident and compassionate individuals.</p>
+            </article>
+          </div>
+          <div class="col-md-4 animate-on-scroll fade-in-up" style="transition-delay: 0.3s;">
+            <article class="ideogram-card h-100 shadow">
+              <div class="ideogram-header">
+                <img src="assets/images/moto.png" alt="Motto icon" style="width: 60px" />
+                <h3 class="h5 fw-bold text-uppercase text-end" style="letter-spacing: 0.2em">Our<br />Motto</h3>
+              </div>
+              <p class="small fw-light mb-0 text-start">Excellence through Heritage - We believe in achieving academic and personal excellence while staying rooted in our rich cultural heritage and values.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Patkai Section -->
+    <section id="admission" class="bg-white overflow-hidden position-relative">
+      <div class="why-patkai-bg-shape"></div>
+      <div class="container position-relative" style="z-index: 2">
+        <div class="text-center mb-4 animate-on-scroll zoom-in">
+            <h2 class="why-patkai-title">WHY PATKAI?</h2>
+        </div>
+        <div class="row align-items-center g-4">
+          <div class="col-md-5 text-center animate-on-scroll fade-in-left">
+            <img src="assets/images/hatibaccha.png" alt="School mascot elephant character" class="img-fluid hatibaccha-img"
+              style="max-width: 300px" />
+          </div>
+          <div class="col-md-7 text-secondary animate-on-scroll fade-in-right">
+            <p>At Patkai The Heritage Public School, we offer a unique educational experience that combines academic excellence with cultural preservation. Our holistic approach to education ensures that students develop not only intellectually but also emotionally and socially.</p>
+            <p>We provide state-of-the-art facilities, experienced faculty, and a nurturing environment that encourages creativity, critical thinking, and leadership skills. Our commitment to preserving and honoring our heritage while preparing students for the future sets us apart. We believe in creating global citizens who are proud of their roots and ready to make a positive impact on the world.</p>
+            <div class="decorative-shapes-wrapper">
+              <div class="decorative-shape-pink"></div>
+              <div class="decorative-shape-maroon"></div>
+            </div>
+          </div>
+        </div>
+        <h2 class="why-patkai-subtitle mt-4 animate-on-scroll fade-in-up" style="transition-delay: 0.2s;">IT MAKES US<br />DIFFERENT.</h2>
+      </div>
+    </section>
+
+    <!-- Glimpses & Notices Section -->
+    <section id="glimpses-notices" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 animate-on-scroll fade-in-left">
+            <h3 class="text-uppercase fw-bold mb-4" style="letter-spacing: 0.2em;">Notices</h3>
+            <div class="notice-box">
+                <div class="scrolling-wrapper">
+                    <!-- Original Group -->
+                    <a href="#">Annual Day celebration on 15th December 2025.</a>
+                    <a href="#">Parent-Teacher meeting for Class X on 5th November 2025.</a>
+                    <a href="#">Diwali vacation starts from 20th October 2025.</a>
+                    <a href="#">Inter-school sports competition registration is now open.</a>
+                    <a href="#">Science exhibition to be held in the first week of January 2026.</a>
+                    <a href="#">Workshop on Robotics for senior students.</a>
+                    <a href="#">Guest lecture on "Careers in Artifical Intelligence".</a>
+                    <!-- Duplicated Group for seamless scroll -->
+                    <a href="#">Annual Day celebration on 15th December 2025.</a>
+                    <a href="#">Parent-Teacher meeting for Class X on 5th November 2025.</a>
+                    <a href="#">Diwali vacation starts from 20th October 2025.</a>
+                    <a href="#">Inter-school sports competition registration is now open.</a>
+                    <a href="#">Science exhibition to be held in the first week of January 2026.</a>
+                    <a href="#">Workshop on Robotics for senior students.</a>
+                    <a href="#">Guest lecture on "Careers in Artifical Intelligence".</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6 animate-on-scroll fade-in-right">
+            <h3 class="text-uppercase fw-bold mb-4" style="letter-spacing: 0.2em;">Events</h3>
+            <div class="events-box">
+                <div class="event-poster-wrapper">
+                    <!-- Original Group -->
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0012.jpg" alt="Robotics Workshop Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0013.jpg" alt="AI Career Lecture Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0015.jpg" alt="Charity Drive Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0018.jpg" alt="Tree Plantation Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0026.jpg" alt="Cultural Fest Poster">
+                    </a>
+                    <!-- Duplicated Group for seamless scroll -->
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0012.jpg" alt="Robotics Workshop Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0013.jpg" alt="AI Career Lecture Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0015.jpg" alt="Charity Drive Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0018.jpg" alt="Tree Plantation Poster">
+                    </a>
+                    <a href="#" class="event-poster">
+                        <img src="assets/images/Event/IMG-20251119-WA0026.jpg" alt="Cultural Fest Poster">
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-3 animate-on-scroll fade-in-up">
+            <div class="glimpses-title-wrapper">
+              <h2 class="glimpses-title">Glimpses.</h2>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row g-4">
+              <div class="col-md-6 animate-on-scroll zoom-in" style="transition-delay: 0.1s;">
+                <div class="event-box"><img src="assets/images/Event/IMG-20251119-WA0008.jpg"
+                    alt="Campus View"></div>
+              </div>
+              <div class="col-md-6 animate-on-scroll zoom-in" style="transition-delay: 0.2s;">
+                <div class="event-box"><img src="assets/images/Event/IMG-20251119-WA0006.jpg"
+                    alt="Sports Day"></div>
+              </div>
+              <div class="col-md-6 animate-on-scroll zoom-in" style="transition-delay: 0.3s;">
+                <div class="event-box"><img src="assets/images/class/class4.jpg"
+                    alt="Classroom"></div>
+              </div>
+              <div class="col-md-6 animate-on-scroll zoom-in" style="transition-delay: 0.4s;">
+                <div class="event-box"><img src="assets/images/Event/IMG-20251119-WA0015.jpg"
+                    alt="Annual Function"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="row gy-4 footer-links">
+          <div class="col-lg-4 col-md-12 animate-on-scroll fade-in-up">
+            <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+              <img src="images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo"
+                style="height: 60px;" />
+              <div class="school-name">
+                <h1 style="font-size: 1rem;">PATKAI THE HERITAGE</h1>
+                <p style="font-size: 0.7rem;">PUBLIC SCHOOL</p>
+              </div>
+            </a>
+            <p class="small text-white-50">A premier educational institution in Assam offering holistic education, cultural heritage preservation, and academic excellence.</p>
+          </div>
+          <div class="col-lg-2 col-6 animate-on-scroll fade-in-up" style="transition-delay: 0.1s;">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#admission">Admissions</a></li>
+              <li><a href="#glimpses-notices">Gallery</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-6 animate-on-scroll fade-in-up" style="transition-delay: 0.2s;">
+            <h5>Academics</h5>
+            <ul>
+              <li><a href="#">Curriculum</a></li>
+              <li><a href="#">Faculty</a></li>
+              <li><a href="#">Achievements</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-12 animate-on-scroll fade-in-up" style="transition-delay: 0.3s;">
+            <h5>Contact Us</h5>
+            <p class="small text-white-50 mb-1">N.H. 15, Near Patkai Bridge, Tezpur, Assam 784001</p>
+            <p class="small text-white-50 mb-1">contact@patkaiheritage.edu.in</p>
+            <p class="small text-white-50 mb-1">+91 12345 67890</p>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="col-md-6">
+            <p>&copy; 2025 Patkai The Heritage. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p>Designed by Echelon Media</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS for Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Social Bar Animation
+      const socialBar = document.getElementById('social-bar');
+      let scrollTimeout;
+
+      window.addEventListener('scroll', () => {
+        if (socialBar) {
+          socialBar.classList.add('hidden');
+        }
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          if (socialBar) {
+            socialBar.classList.remove('hidden');
+          }
+        }, 250);
+      });
+
+      // Scroll Animations
+      const scrollElements = document.querySelectorAll(".animate-on-scroll");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      }, {
+        threshold: 0.1 
+      });
+
+      scrollElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+
+</html>

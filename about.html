@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Patkai The Heritage Public School</title>
+  <meta name="description"
+    content="Learn about the history, mission, vision, and leadership of Patkai The Heritage Public School, a premier educational institution in Assam." />
+  <meta name="keywords"
+    content="About Patkai Heritage, School History, School Mission, School Vision, Principal Message, School Infrastructure" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About Us | Patkai The Heritage Public School" />
+  <meta property="og:description"
+    content="Discover the foundational values and vision that guide Patkai The Heritage Public School." />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;700&family=Great+Vibes&family=League+Spartan:wght@900&family=Poppins:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* Custom Styles from Homepage */
+    :root {
+      --maroon-dark: #7a1538;
+      --maroon-light: #a82d55;
+      --pink-light: #ebb2c0;
+      --bg-light: #fffdfb;
+      --text-secondary: #555;
+    }
+
+    html,
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--maroon-dark);
+      background-color: var(--bg-light);
+      overflow-x: hidden;
+    }
+
+    .font-great-vibes {
+      font-family: "Great Vibes", cursive;
+    }
+
+    .font-cormorant {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--maroon-dark);
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand img {
+      height: 60px;
+    }
+
+    .navbar-brand .school-name {
+      color: #ffffff;
+      margin-left: 1rem;
+      border-left: 2px solid white;
+      padding-left: 1rem;
+    }
+
+    .navbar-brand h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .navbar-brand p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0 0.8rem;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+      color: var(--pink-light);
+    }
+
+    .dropdown-menu {
+      background-color: var(--maroon-dark);
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .dropdown-item {
+      color: #eee;
+      font-size: 0.85rem;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item.active {
+      color: white;
+      background-color: var(--maroon-light);
+    }
+
+    /* Custom Animated Hamburger Button */
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+      width: 30px;
+      height: 22px;
+      position: relative;
+      background: transparent;
+      transition: all 0.35s ease-in-out;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler .hamburger-line {
+      display: block;
+      background-color: #fff;
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      position: absolute;
+      left: 0;
+      transition: all 0.35s ease-in-out;
+    }
+
+    .navbar-toggler .hamburger-line-1 {
+      top: 0;
+    }
+
+    .navbar-toggler .hamburger-line-2 {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .navbar-toggler .hamburger-line-3 {
+      bottom: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-1 {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-2 {
+      opacity: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .hamburger-line-3 {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+
+    /* Page Header Section */
+    .page-header {
+      background: linear-gradient(rgba(122, 21, 56, 0.8),
+          rgba(122, 21, 56, 0.8)),
+        url("/assets/images/Hero\ Section.png") no-repeat center center;
+      background-size: cover;
+      padding: 8rem 0;
+      color: white;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title h2 {
+      font-family: "Great Vibes", cursive;
+      font-size: 4rem;
+      color: var(--maroon-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title p {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    /* Content Card Styling */
+    .content-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+      margin-bottom: 2rem;
+      border-left: 5px solid var(--maroon-dark);
+    }
+
+    .content-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      color: var(--maroon-light);
+      margin-bottom: 1rem;
+    }
+
+    .content-card p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* Principal Section */
+    .principal-img {
+      border-radius: 1rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--maroon-dark);
+      color: white;
+      padding: 4rem 0 2rem 0;
+    }
+
+    .footer-links h5 {
+      color: var(--pink-light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li a {
+      color: #ddd;
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Scroll Animation Styles */
+    .animate-on-scroll {
+      opacity: 0;
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      will-change: opacity, transform;
+    }
+
+    .animate-on-scroll.fade-in-up {
+      transform: translateY(40px);
+    }
+
+    .animate-on-scroll.fade-in-left {
+      transform: translateX(-40px);
+    }
+
+    .animate-on-scroll.fade-in-right {
+      transform: translateX(40px);
+    }
+
+    .animate-on-scroll.zoom-in {
+      transform: scale(0.9);
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar {
+        padding: 1rem 1.5rem;
+      }
+
+      .navbar-brand img {
+        height: 50px;
+      }
+
+      .navbar-brand h1 {
+        font-size: 1rem;
+      }
+
+      .navbar-brand p {
+        font-size: 0.7rem;
+      }
+
+      .navbar-collapse.show,
+      .navbar-collapse.collapsing {
+        background-color: rgba(122, 21, 56, 0.9);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo" />
+          <div class="school-name">
+            <h1>PATKAI THE HERITAGE</h1>
+            <p>PUBLIC SCHOOL</p>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="hamburger-line hamburger-line-1"></span>
+          <span class="hamburger-line hamburger-line-2"></span>
+          <span class="hamburger-line hamburger-line-3"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownAbout" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                About Us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                <li>
+                  <a class="dropdown-item" href="#history">Foundational History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#mission-vision">Mission & Vision</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#principal">About the Principal</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#admin">Administrative Framework</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#infra">Infrastructure</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#faculty">Faculty Profiles</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#logo">Logo Significance</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="academics.html" id="navbarDropdownAcademics" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Academics
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownAcademics">
+                <li>
+                  <a class="dropdown-item" href="academics.html#curriculum">Curriculum Overview</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academics.html#syllabus">Class-wise Syllabus</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academics.html#pedagogy">Pedagogical Approach</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academics.html#calendar">Academic Calendar</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academics.html#achievements">Academic Achievements</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academics.html#results">Results</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="academics.html#extra-curricular">Extra-Curricular Activities</a>
+                </li>
+              </ul>
+            </li>
+           <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="admission.html" id="navbarDropdownAdmission" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admission
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdmission">
+                        <li><a class="dropdown-item" href="admission.html">Admission Overview</a></li>
+                        <li><a class="dropdown-item" href="admission.html#procedure">Admission Procedure</a></li>
+                        <li><a class="dropdown-item" href="admission.html#fees">Fee Structure</a></li>
+                    </ul>
+                </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="gallery.html" id="navbarDropdownGallery" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Gallery
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                        <li><a class="dropdown-item" href="gallery.html">Gallery Overview</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#class-photos">Class-wise Photography</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#campus-life">Campus Life</a></li>
+                        <li><a class="dropdown-item" href="gallery.html#events">Event Gallery</a></li>
+                    </ul>
+                </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="notice-board.html" id="navbarDropdownNotice" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Notice Board
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownNotice">
+                        <li><a class="dropdown-item" href="notice-board.html">Notice Board Overview</a></li>
+                        <li><a class="dropdown-item" href="notice-board.html#notifications">Notifications</a></li>
+                        <li><a class="dropdown-item" href="notice-board.html#downloads">Downloads</a></li>
+                    </ul>
+                </li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header animate-on-scroll fade-in-up">
+      <div class="container">
+        <h1>About Our School</h1>
+      </div>
+    </section>
+
+    <!-- Foundational History -->
+    <section id="history" class="bg-light">
+      <div class="container">
+        <div class="section-title animate-on-scroll fade-in-up">
+          <p>Our Roots</p>
+          <h2>Foundational History</h2>
+        </div>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 animate-on-scroll fade-in-left">
+            <img src="https://placehold.co/600x400/7a1538/ffffff?text=Founders&font=poppins"
+              class="img-fluid rounded-4 shadow-lg" alt="Founders Portrait" />
+          </div>
+          <div class="col-lg-6 animate-on-scroll fade-in-right">
+            <div class="content-card" style="border-color: #a82d55">
+              <h3>A Legacy of Vision</h3>
+              <p>
+                Patkai The Heritage Public School was founded in [Year] by a
+                group of visionary educators and community leaders who
+                recognized the need for an institution that blends academic
+                rigor with a deep appreciation for our cultural heritage.
+                Their dream was to create a learning sanctuary where students
+                could receive a modern education without losing touch with
+                their roots. The school started with a humble batch of 50
+                students and has since grown into a beacon of knowledge and
+                culture in Assam, nurturing thousands of young minds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section id="mission-vision">
+      <div class="container">
+        <div class="section-title animate-on-scroll fade-in-up">
+          <p>Our Guiding Principles</p>
+          <h2>Mission & Vision</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 animate-on-scroll fade-in-up" style="transition-delay: 0.1s">
+            <div class="content-card h-100">
+              <h3><i class="fas fa-bullseye me-2"></i>Our Mission</h3>
+              <p>
+                Our mission is to provide quality education that nurtures
+                intellectual curiosity, critical thinking, and moral values.
+                We are dedicated to creating a dynamic learning environment
+                that encourages students to explore their potential, celebrate
+                diversity, and preserve our rich cultural heritage for future
+                generations.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 animate-on-scroll fade-in-up" style="transition-delay: 0.2s">
+            <div class="content-card h-100">
+              <h3><i class="fas fa-eye me-2"></i>Our Vision</h3>
+              <p>
+                To be a leading educational institution that harmoniously
+                combines traditional values with modern pedagogy. We aspire to
+                cultivate confident, compassionate, and responsible
+                individuals who are equipped to excel in a globalized world
+                while remaining firmly rooted in their heritage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About the Principal -->
+    <section id="principal" class="bg-light">
+      <div class="container">
+        <div class="section-title animate-on-scroll fade-in-up">
+          <p>A Message From</p>
+          <h2>The Principal's Desk</h2>
+        </div>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 animate-on-scroll fade-in-left">
+            <div class="content-card" style="border-color: #a82d55">
+              <h3>Mr. Pulok Banerjee</h3>
+              <p>
+                It is with immense pride and great pleasure that I extend a
+                warm welcome to the Patkai the Heritage Public School
+                community. As the Principal, it is an honor to lead an
+                institution that is deeply committed to upholding the rich
+                educational and cultural heritage of our region, while
+                preparing our students for a future of global opportunities.
+              </p>
+              <p>
+                At Patkai, our mission goes beyond academic excellence. We
+                believe that true education is a holistic process that
+                nurtures the mind, body, and spirit. We strive to create an
+                inclusive and stimulating environment where every child feels
+                respected, appreciated, and inspired to discover their unique
+                potential.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center animate-on-scroll fade-in-right">
+            <img src="assets/images/principal.png" alt="Principal Mr. Pulok Banerjee" class="img-fluid principal-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- More Sections -->
+    <!-- <section id="admin">
+      <div class="container">
+        <div class="section-title animate-on-scroll fade-in-up">
+          <p>Our Structure</p>
+          <h2>Administrative Framework</h2>
+        </div>
+        <div class="content-card animate-on-scroll zoom-in">
+          <p>
+            Our school operates under a well-defined administrative framework
+            designed to ensure smooth and efficient management. The structure
+            is headed by the Board of Governors, followed by the Principal,
+            Vice-Principal, and heads of various academic and administrative
+            departments. This hierarchical yet collaborative system promotes
+            accountability, clear communication, and effective
+            decision-making, all aimed at fostering an optimal learning
+            environment for our students.
+          </p>
+          <div class="text-center mt-4">
+            <img src="https://placehold.co/800x400/a82d55/ffffff?text=Organizational+Chart&font=poppins"
+              class="img-fluid rounded-3" alt="Organizational Chart" />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="infra" class="bg-light">
+      <div class="container">
+        <div class="section-title animate-on-scroll fade-in-up">
+          <p>Our Facilities</p>
+          <h2>Infrastructure</h2>
+        </div>
+        <div class="content-card animate-on-scroll zoom-in">
+          <p>
+            We provide state-of-the-art facilities to support a comprehensive
+            educational experience. Our campus includes spacious and
+            well-ventilated classrooms, advanced science and computer labs, a
+            well-stocked library, a dedicated arts and music wing, and
+            extensive sports facilities including a playground and basketball
+            court. We believe that a world-class infrastructure is essential
+            for nurturing well-rounded individuals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faculty">
+      <div class="container">
+        <div class="section-title animate-on-scroll fade-in-up">
+          <p>Our Mentors</p>
+          <h2>Our Dedicated Faculty</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10 animate-on-scroll fade-in-up">
+            <p class="text-secondary mb-4 text-center">
+              Meet the pillars of our institution—our experienced and
+              passionate educators. Committed to fostering a love for
+              learning, they guide our students with expertise, dedication,
+              and care, ensuring a nurturing environment for academic and
+              personal growth.
+            </p>
+            <div class="faculty-img-wrapper shadow-lg rounded-4 overflow-hidden">
+              <img src="https://placehold.co/1200x600/7a1538/ffffff?text=Our+Dedicated+Faculty&font=poppins"
+                alt="Group photo of the faculty at Patkai The Heritage Public School" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="logo" class="bg-light">
+      <div class="container">
+        <div class="section-title animate-on-scroll fade-in-up">
+          <p>Our Symbol</p>
+          <h2>Logo Significance</h2>
+        </div>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-4 text-center animate-on-scroll fade-in-left">
+            <img src="assets/images/Logo stylized version vf.png" alt="School Logo" class="img-fluid"
+              style="max-width: 250px" />
+          </div>
+          <div class="col-lg-8 animate-on-scroll fade-in-right">
+            <div class="content-card" style="border-color: #a82d55">
+              <p>
+                Our logo is a representation of our core values. The [describe
+                element, e.g., 'open book'] symbolizes the pursuit of
+                knowledge, while the [describe element, e.g., 'traditional
+                motif'] represents our deep roots in our cultural heritage.
+                The [describe element, e.g., 'rising sun'] signifies our
+                commitment to illuminating the future for our students,
+                guiding them towards a bright and successful path. Together,
+                these elements encapsulate our motto: "Excellence through
+                Heritage."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="row gy-4 footer-links">
+        <div class="col-lg-4 col-md-12 animate-on-scroll fade-in-up">
+          <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+            <img src="assets/images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo"
+              style="height: 60px" />
+            <div class="school-name">
+              <h1 style="font-size: 1rem">PATKAI THE HERITAGE</h1>
+              <p style="font-size: 0.7rem">PUBLIC SCHOOL</p>
+            </div>
+          </a>
+          <p class="small text-white-50">
+            A premier educational institution in Assam offering holistic
+            education, cultural heritage preservation, and academic
+            excellence.
+          </p>
+        </div>
+        <div class="col-lg-2 col-6 animate-on-scroll fade-in-up" style="transition-delay: 0.1s">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6 animate-on-scroll fade-in-up" style="transition-delay: 0.2s">
+          <h5>Academics</h5>
+          <ul>
+            <li><a href="#">Curriculum</a></li>
+            <li><a href="#faculty">Faculty</a></li>
+            <li><a href="#">Achievements</a></li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-12 animate-on-scroll fade-in-up" style="transition-delay: 0.3s">
+          <h5>Contact Us</h5>
+          <p class="small text-white-50 mb-1">
+            N.H. 15, Near Patkai Bridge, Tezpur, Assam 784001
+          </p>
+          <p class="small text-white-50 mb-1">
+            contact@patkaiheritage.edu.in
+          </p>
+          <p class="small text-white-50 mb-1">+91 12345 67890</p>
+        </div>
+      </div>
+      <div class="row footer-bottom">
+        <div class="col-md-6">
+          <p>&copy; 2025 Patkai The Heritage. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p>Designed by Echelon Media</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS for Animations -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Scroll Animations
+      const scrollElements = document.querySelectorAll(".animate-on-scroll");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // Animate only once
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      scrollElements.forEach((el) => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+
+</html>
