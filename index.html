@@ -12,19 +12,15 @@
   <meta name="keywords"
     content="Patkai Heritage School, Public School Assam, Quality Education, Academic Excellence, Cultural Heritage, Holistic Education" />
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Patkai The Heritage Public School | Excellence in Education" />
   <meta property="og:description"
     content="Premier educational institution offering holistic education and cultural heritage preservation in Assam" />
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -241,6 +237,7 @@
       margin-top: -210px;
       /* Moves image up */
       position: relative;
+      /* Ensure image doesn't cover social bar on mobile if z-index is an issue, though social bar is fixed */
     }
 
     /* Section Styles */
@@ -325,7 +322,7 @@
     /* Why Patkai Section */
     #admission {
       padding-top: 4rem;
-      padding-bottom: 4rem;
+      padding-bottom: 0rem;
     }
 
     .why-patkai {
@@ -375,41 +372,38 @@
 
     .why-patkai-subtitle {
       font-family: 'League Spartan', sans-serif;
-      font-size: clamp(2rem, 6vw, 3.5rem);
+   
+      font-size: 100px;
       /* Reduced size */
       font-weight: 900;
-      line-height: 1;
+      line-height: 0.7;
       text-align: right;
       /* Aligned to the right */
     }
+    
+    .heri{
+     position: relative; /* Allows us to move it relative to its normal position */
+      top: 20px;
+    }
+    
 
+    /* Updated Decorative Pen Styles */
     .decorative-shapes-wrapper {
       position: relative;
-      margin-top: 2rem;
-      height: 100px;
+      margin-top: 0.1rem;
+      height: 300px;
+      display: flex;
+      justify-content: center; /* Center the pen */
     }
 
-    .decorative-shape-pink {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-70%);
-      width: 250px;
-      height: 90px;
-      background-color: var(--pink-light);
-      border-radius: 50px;
+    .decorative-pen-img {
+        height: 90%;
+        width: auto;
+        object-fit: contain;
     }
 
-    .decorative-shape-maroon {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(30%);
-      width: 120px;
-      height: 120px;
-      background-color: var(--maroon-dark);
-      border-radius: 50%;
-    }
+
+
 
     /* Glimpses & Notices Section */
     #glimpses-notices {
@@ -634,6 +628,14 @@
       transform: translate(0, 0) scale(1);
     }
 
+    #hatibaccha-img{
+
+      max-width: 100% !important; /* Force bigger size on mobile */
+            width: 500px; /* Optional fallback width */
+        }
+
+
+
     /* Responsive Adjustments */
     @media (max-width: 991.98px) {
       .navbar {
@@ -666,9 +668,10 @@
         }
 
         .why-patkai-subtitle {
-            text-align: center;
-            font-size: clamp(2rem, 10vw, 3rem);
+            text-align: right;
+            font-size: 60px;
             margin-top: 2rem;
+            padding-right:18px;
         }
 
         .glimpses-title-wrapper {
@@ -683,25 +686,83 @@
             transform: rotate(0deg);
             font-size: 4rem;
         }
+
+        /* --- UPDATED: Mobile Hero Text Adjustments (4 Lines) --- */
+       /* --- UPDATED: Mobile Hero Text Spacing --- */
+      .hero-text-container {
+          padding-top: 0;
+          margin-top: -80px ;
+          align-items: center;
+          justify-content: left;
+          padding-bottom: 0;
+          text-align: center;
+      }
+
+      /* Force spans to new lines */
+      .hero-title-main span, 
+      .hero-title-sub span {
+          display: block; 
+          width: 100%;
+      }
+
+      /* --- CHANGE IS HERE --- */
+      .hero-title-main, 
+      .hero-title-sub {
+          /* Reduces vertical space between lines inside the H2 and H3 */
+          line-height: 0.85 !important; 
+      }
+
+      .hero-title-main {
+           /* Removes the gap between "The Future" and "Honoring the" */
+          margin-bottom: 0.5rem !important;
+      }
+
+      .hero-title-sub {
+          /* Removes default top margin */
+          margin-top: -6px !important;
+      }
+        
+        /* --- UPDATED: Mobile Hero Image Adjustments (Bottom Line) --- */
+        .building-image {
+            transform: scale(1.9); 
+            transform-origin: bottom center;
+            /* Move image to the bottom */
+           margin-top: auto;   /* Pushes the image to the very bottom of the container */
+            margin-bottom: -50px;
+        }
+
+        /* --- UPDATED: Mobile Mascot Size --- */
+        .hatibaccha-img {
+          margin-top: -20px;
+            max-width: 100% !important; /* Force bigger size on mobile */
+            width: 300px; /* Optional fallback width */
+            margin-left: 15px;
+        }
+        
+        .decorative-shapes-wrapper {
+            height: 200px;
+        }
+        
+        .decorative-pen-img {
+            height: 100%;
+        }
       }
   </style>
 </head>
 
 <body>
   <main>
-    <!-- Social Media Bar -->
     <div id="social-bar" class="social-bar">
       <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <a href="mailto:contact@patkaiheritage.edu.in" aria-label="Email"><i class="fas fa-envelope"></i></a>
     </div>
 
-    <!-- Hero Section -->
     <section id="home" class="hero-section">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo" />
+            <img src="assets/images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo" />
             <div class="school-name">
               <h1>PATKAI THE HERITAGE</h1>
               <p>PUBLIC SCHOOL</p>
@@ -783,17 +844,16 @@
       <div class="hero-text-container">
         <div class="hero-content">
           <h2 class="hero-title-main">
-              <span class="font-great-vibes-hero">Shaping</span><span class="font-cormorant-hero" style="font-family: 'League Spartan';"> the future</span>
+              <span class="font-great-vibes-hero">Shaping</span><span class="font-cormorant-hero"> the future</span>
           </h2>
-          <h3 class="hero-title-sub" style="margin-top: -30px; font-family: 'League Spartan';">
-              <span class="font-cormorant-hero" >honoring the </span><span class="font-great-vibes-hero">Heritage</span>
+          <h3 class="hero-title-sub" style="margin-top: -50px; font-family: 'League Spartan';">
+              <span class="font-cormorant-hero" >honoring the </span><span class="font-great-vibes-hero heri" >Heritage</span>
           </h3>
         </div>
       </div>
       <img src="assets/images/Hero Section.png" alt="School building architectural rendering" class="building-image" />
     </section>
 
-    <!-- Principal's Desk Section -->
     <section id="about" class="bg-white">
       <div class="container">
         <div class="row align-items-center g-5">
@@ -824,7 +884,6 @@
       </div>
     </section>
 
-    <!-- Ideograms Section -->
     <section id="academics" class="bg-light">
       <div class="container text-center">
         <div class="section-title-line animate-on-scroll fade-in-up">
@@ -865,7 +924,6 @@
       </div>
     </section>
 
-    <!-- Why Patkai Section -->
     <section id="admission" class="bg-white overflow-hidden position-relative">
       <div class="why-patkai-bg-shape"></div>
       <div class="container position-relative" style="z-index: 2">
@@ -874,23 +932,23 @@
         </div>
         <div class="row align-items-center g-4">
           <div class="col-md-5 text-center animate-on-scroll fade-in-left">
-            <img src="assets/images/hatibaccha.png" alt="School mascot elephant character" class="img-fluid hatibaccha-img"
+            <img src="assets/images/hatibaccha.png" alt="School mascot elephant character" class="hatibaccha-img"
               style="max-width: 300px" />
           </div>
           <div class="col-md-7 text-secondary animate-on-scroll fade-in-right">
             <p>At Patkai The Heritage Public School, we offer a unique educational experience that combines academic excellence with cultural preservation. Our holistic approach to education ensures that students develop not only intellectually but also emotionally and socially.</p>
             <p>We provide state-of-the-art facilities, experienced faculty, and a nurturing environment that encourages creativity, critical thinking, and leadership skills. Our commitment to preserving and honoring our heritage while preparing students for the future sets us apart. We believe in creating global citizens who are proud of their roots and ready to make a positive impact on the world.</p>
-            <div class="decorative-shapes-wrapper">
-              <div class="decorative-shape-pink"></div>
-              <div class="decorative-shape-maroon"></div>
+            
+            <div class="decorative-shapes-wrapper" >
+               <img src="assets/images/pen and mark-01.png" alt="Decorative Pen" class="decorative-pen-img">
             </div>
+
           </div>
         </div>
-        <h2 class="why-patkai-subtitle mt-4 animate-on-scroll fade-in-up" style="transition-delay: 0.2s;">IT MAKES US<br />DIFFERENT.</h2>
+        <h2 class="why-patkai-subtitle mt-4 animate-on-scroll fade-in-up" style="transition-delay: 0.2s; ">IT MAKES US<br />DIFFERENT.</h2>
       </div>
     </section>
 
-    <!-- Glimpses & Notices Section -->
     <section id="glimpses-notices" class="py-5 bg-light">
       <div class="container">
         <div class="row">
@@ -898,7 +956,6 @@
             <h3 class="text-uppercase fw-bold mb-4" style="letter-spacing: 0.2em;">Notices</h3>
             <div class="notice-box">
                 <div class="scrolling-wrapper">
-                    <!-- Original Group -->
                     <a href="#">Annual Day celebration on 15th December 2025.</a>
                     <a href="#">Parent-Teacher meeting for Class X on 5th November 2025.</a>
                     <a href="#">Diwali vacation starts from 20th October 2025.</a>
@@ -906,7 +963,6 @@
                     <a href="#">Science exhibition to be held in the first week of January 2026.</a>
                     <a href="#">Workshop on Robotics for senior students.</a>
                     <a href="#">Guest lecture on "Careers in Artifical Intelligence".</a>
-                    <!-- Duplicated Group for seamless scroll -->
                     <a href="#">Annual Day celebration on 15th December 2025.</a>
                     <a href="#">Parent-Teacher meeting for Class X on 5th November 2025.</a>
                     <a href="#">Diwali vacation starts from 20th October 2025.</a>
@@ -921,7 +977,6 @@
             <h3 class="text-uppercase fw-bold mb-4" style="letter-spacing: 0.2em;">Events</h3>
             <div class="events-box">
                 <div class="event-poster-wrapper">
-                    <!-- Original Group -->
                     <a href="#" class="event-poster">
                         <img src="assets/images/Event/IMG-20251119-WA0012.jpg" alt="Robotics Workshop Poster">
                     </a>
@@ -937,7 +992,6 @@
                     <a href="#" class="event-poster">
                         <img src="assets/images/Event/IMG-20251119-WA0026.jpg" alt="Cultural Fest Poster">
                     </a>
-                    <!-- Duplicated Group for seamless scroll -->
                     <a href="#" class="event-poster">
                         <img src="assets/images/Event/IMG-20251119-WA0012.jpg" alt="Robotics Workshop Poster">
                     </a>
@@ -987,14 +1041,12 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contact">
       <div class="container">
         <div class="row gy-4 footer-links">
           <div class="col-lg-4 col-md-12 animate-on-scroll fade-in-up">
             <a class="navbar-brand d-flex align-items-center mb-3" href="#">
-              <img src="images/Logo stylized version vf.png" alt="Patkai The Heritage Public School Logo"
-                style="height: 60px;" />
+              <img src="assets/images/Logo stylized version vf.png alt="Patkai The Heritage Public School Logo style="height: 60px;" />
               <div class="school-name">
                 <h1 style="font-size: 1rem;">PATKAI THE HERITAGE</h1>
                 <p style="font-size: 0.7rem;">PUBLIC SCHOOL</p>
@@ -1039,10 +1091,8 @@
     </footer>
   </main>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JS for Animations -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Social Bar Animation

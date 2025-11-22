@@ -465,10 +465,11 @@
 
 
 
-
+git init
 git remote add origin https://github.com/AryanAKE/patkaitheheritagepublicschool.git
+git add .
+git commit -m "Initial upload of school website code"
 git branch -M main
 git push -u origin main
-
                         
                         
