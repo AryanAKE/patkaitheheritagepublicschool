@@ -316,6 +316,21 @@
       animation: heroImageSlideUp 1.5s ease-out forwards;
     }
 
+    /* Custom Theme Button */
+    .btn-theme {
+      color: var(--maroon-dark);
+      border: 1px solid var(--maroon-dark);
+      background-color: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .btn-theme:hover {
+      background-color: var(--maroon-dark);
+      color: #ffffff;
+      border-color: var(--maroon-dark);
+      box-shadow: 0 5px 15px rgba(122, 21, 56, 0.3); /* Optional: adds a glow effect */
+    }
+
     /* Section Styles */
     section {
       padding: 5rem 0;
@@ -1048,9 +1063,9 @@
               student feels empowered to learn, explore, and excel.
             </p>
             <div class="mt-4">
-              <a href="principal.html" class="btn btn-outline-danger rounded-pill px-4">
-                View Profile <i class="fas fa-arrow-right ms-2"></i>
-              </a>
+              <a href="principal.html" class="btn btn-theme rounded-pill px-4">
+  View Profile <i class="fas fa-arrow-right ms-2"></i>
+</a>
             </div>
           </div>
           <div class="col-lg-6 animate-on-scroll fade-in-right">
