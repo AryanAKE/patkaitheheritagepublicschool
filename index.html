@@ -18,7 +18,7 @@
     content="Premier educational institution offering holistic education and cultural heritage preservation in Assam" />
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
+<link rel="stylesheet" href="loaader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,6 +74,7 @@
       /* Prevent horizontal scroll */
     }
 
+    
     .font-great-vibes {
       font-family: "Great Vibes", cursive;
     }
@@ -271,6 +272,36 @@
       vertical-align: middle;
     }
 
+    /* --- HERO IMAGE ANIMATIONS --- */
+    
+    /* Animation for Desktop */
+    @keyframes heroImageSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100px); /* Start from below */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* End at natural position */
+      }
+    }
+
+    /* Animation for Mobile (preserves the existing scale) */
+    @keyframes heroImageSlideUpMobile {
+      0% {
+        opacity: 0;
+        /* Combine scale(1.9) with the slide effect */
+        transform: scale(1.9) translateY(50px); 
+        transform-origin: bottom center;
+      }
+      100% {
+        opacity: 1;
+        /* End at the original mobile scale */
+        transform: scale(1.9) translateY(0); 
+        transform-origin: bottom center;
+      }
+    }
+
     /* Building Image */
     .building-image {
       width: 100%;
@@ -280,6 +311,9 @@
       /* Moves image up */
       position: relative;
       /* Ensure image doesn't cover social bar on mobile if z-index is an issue, though social bar is fixed */
+      
+      /* Apply Desktop Animation */
+      animation: heroImageSlideUp 1.5s ease-out forwards;
     }
 
     /* Section Styles */
@@ -786,12 +820,16 @@
 
       /* --- UPDATED: Mobile Hero Image Adjustments (Bottom Line) --- */
       .building-image {
-        transform: scale(1.9);
+        /* Keep these existing lines */
+        transform: scale(1.9); 
         transform-origin: bottom center;
         /* Move image to the bottom */
         margin-top: auto;
         /* Pushes the image to the very bottom of the container */
         margin-bottom: -50px;
+
+        /* Apply Mobile Animation (overrides desktop) */
+        animation-name: heroImageSlideUpMobile; 
       }
 
       /* --- UPDATED: Mobile Mascot Size --- */
@@ -816,6 +854,14 @@
 </head>
 
 <body>
+  <div id="loader-wrapper">
+    <div class="bouncing-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
   <main>
     <div id="social-bar" class="social-bar">
       <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1278,8 +1324,9 @@
     </footer>
   </main>
 
+  
+  <script src="loaderr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Social Bar Animation
@@ -1317,6 +1364,21 @@
       scrollElements.forEach((el) => {
         observer.observe(el);
       });
+
+      // --- LOADING SCREEN LOGIC ---
+      const loader = document.getElementById('loader-wrapper');
+      
+      // Add a slight delay to ensure the loader is seen
+      setTimeout(() => {
+        if (loader) {
+          loader.classList.add('fade-out');
+          
+          // Remove from DOM entirely after transition
+          setTimeout(() => {
+            loader.style.display = 'none';
+          }, 500); // Matches CSS transition duration
+        }
+      }, 800); // 800ms delay before fading out
     });
   </script>
 </body>
